@@ -1,7 +1,9 @@
 html {
     font-family: Helveitca, san-serif;
-    margin: 0 auto;
     
+}
+body {
+    margin: 0;
 }
 html img {
     box-shadow: 5px 5px 5px #888888;
@@ -10,14 +12,19 @@ html video {
    box-shadow: 5px 5px 5px #888888; 
 }
 .navbar {
+    position: fixed;
+    width: 100%;
     margin: 0 auto;
     background-color: white;
     height: 40px;
+    padding: 10px 24px;
+
 }
 .navbar img {
     float: left;
     margin: 0 auto;
     height: 35px;
+    
 }
 .navbar p {
     float: left;
@@ -29,7 +36,7 @@ html video {
 .navbar ul {
     margin: 0 auto;
     float: right;
-    padding-bottom: 10px;
+    padding-right: 16px;
 }
 .navbar ul li {
     display: inline-block;
@@ -45,13 +52,42 @@ html video {
     color: white;
     letter-spacing: 1.6;
 }
+
 .button:hover{
     background-color: white;
-    border-radius: 10px;
+    transition-property: color;
+    transition: 0.8s linear;
+    color: red;
 }
+
 .button a:hover {
     color: red;
 }
+.navbar_mobile {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+@media only screen and (max-width: 480px) {
+    .navbar {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .navbar_mobile {
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 480px) {
+        .navbar_mobile {
+            display: none;
+        }
+}
+
 
 /* banner section*/
 
@@ -93,17 +129,46 @@ html video {
 }
 .banner_right a:hover {
   color: red; 
+  transition-property: color;
+  transition: 0.8s linear;
 }
 .banner_right span {
     width: 60%;
     height: 40px;
     background-color:#4A4A4A;
     text-align:center;
+    transition-property: color;
+    transition: 0.8s linear;
 }
 .banner_right span:hover {
     background-color: #D8D8D8;
     color: black;
 }
+
+@media only screen and (max-width: 480px){
+    .container {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 32px;
+        
+    } 
+    .banner_left {
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+    }
+    .banner_right {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+    }
+    .banner_right h1 {
+        padding: 0;
+     }
+    
+    
+    }
 
  /*information section */
 
@@ -117,8 +182,8 @@ html video {
 }
 .info_left {
     width: 60%;
+    margin-top: 20px;
     padding-left: 24px;
-    padding-top: 32px;
     border-right: 1px solid #D8D8D8;
     padding-right: 24px;
 }
@@ -149,6 +214,12 @@ html video {
 .img_box img {
     width: 100%;
 }
+.img_box img:hover {
+    transform: scale(1.03, 1.03);
+    transition: transform 0.3s linear;
+    
+    
+}
 .info_date {
     width: 65%;
     display: flex;
@@ -172,6 +243,33 @@ html video {
 }
 #guest {
     background-color: #D8D8D8;
+}
+
+@media only screen and (max-width: 480px){
+    .info_left {
+        display: none;
+    }
+    .info_right {
+        width: 100%;
+    }
+    .info_date {
+        width: 100%;
+    }
+    .info_box {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .img_box {
+        width: 100%;
+        padding: 0;
+        margin: 0 16px;
+    }
+    .img_box img {
+        width: 100%;
+        
+    }
+  
 }
 
   /*Start learning section */
@@ -208,6 +306,10 @@ html video {
 .box img {
     width: 100%;
     height: auto;
+}
+.box img:hover {
+    transform: scale(1.03, 1.03);
+    transition: transform 0.3s linear;
 }
 .box h2 {
     padding-left: 10px;
