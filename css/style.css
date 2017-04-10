@@ -306,46 +306,43 @@ html video {
 }
 .main_learn h1 {
     text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    margin: 0;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 .learn_boxes {
     width: 90%;
     margin: 0 auto;
+    padding-bottom: 32px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
     flex-wrap: wrap;
+    justify-content: space-around;
+    
 }
 .box {
     width: 30%;
-    height: 40%;
+    margin-bottom: 32px;
+    background-color: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    background-color: white;
-    margin-bottom: 32px;
+    justify-content: center;
 }
 .box img {
     width: 100%;
-    height: auto;
 }
 .box img:hover {
     transform: scale(1.03, 1.03);
     transition: transform 0.3s linear;
 }
 .box h2 {
-    padding-left: 10px;
     font-weight: bold;
+    padding-left: 10px;
 }
 .box p {
     padding-left: 10px;
     font-size: 20px;
 }
-.courses {
-    margin-left: 10px;
-    font-size:20px;
-}
+
 @media only screen and (min-width: 481px) {
     .main_mobile {
         display: none;
@@ -439,6 +436,11 @@ html video {
 }
 .clear {
     clear: both;
+}
+@media only screen and (min-width: 481px) {
+    .thesis_mobile {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 480px) {
