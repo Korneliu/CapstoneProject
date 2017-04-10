@@ -45,24 +45,30 @@ html video {
     font-size: 20px;
     background-color: #4A4A4A;
     text-align: center;
-    line-height: 40px
+    line-height: 40px;
 }
 .navbar a {
+    display: block;
+    padding: 0;
     text-decoration: none;
     color: white;
     letter-spacing: 1.6;
+    width: 100%;
 }
 
-.button:hover{
+.navbar ul li:hover {
     background-color: white;
     transition-property: color;
-    transition: 0.8s linear;
+    transition: 0.7s linear;
     color: red;
+}
+.navbar a:hover {
+    transition-property: color;
+    transition: 0.7s linear;
+    color: red;
+    
 }
 
-.button a:hover {
-    color: red;
-}
 .navbar_mobile {
     width: 100%;
     margin: 0 auto;
@@ -110,40 +116,35 @@ html video {
 .banner_right {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
+    justify-content: center;
     width: 40%;
     padding-left: 40px;
     color: #4A4A4A;
 }
-.banner_right h1 {
-    padding-top: 30%;
-}
+
 .banner_right a {
+    display: block;
     text-decoration: none;
-    color: white;
-    font-size: 24px;
+    text-align: center;
     line-height: 40px;
-    letter-spacing: 4.4;
-    font-weight: bold;
+    color: white;
+    letter-spacing: 1.6; 
 }
-.banner_right a:hover {
-  color: red; 
-  transition-property: color;
-  transition: 0.8s linear;
-}
-.banner_right span {
+ .banner_right span {
     width: 60%;
     height: 40px;
     background-color:#4A4A4A;
     text-align:center;
-    transition-property: color;
-    transition: 0.8s linear;
+    font-size: 28px;
 }
-.banner_right span:hover {
+.banner_right a:hover {
+    color: red;
     background-color: #D8D8D8;
-    color: black;
+    transition-property: color;
+    transition: 0.7s linear;
 }
+
 
 @media only screen and (max-width: 480px){
     .container {
@@ -186,6 +187,7 @@ html video {
     padding-left: 24px;
     border-right: 1px solid #D8D8D8;
     padding-right: 24px;
+    padding-top: 32px;
 }
 .info_left img {
     width: 100%;
@@ -199,17 +201,23 @@ html video {
     color: #4A4A4A;
     display: flex;
     flex-direction: column;
+    padding-top: 32px;
     margin-top: 20px;
+    padding-bottom: 32px;
 }
 .info_box {
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;   
+    margin: 0 auto;
 }
 .img_box {
     width: 35%;
-    padding:  16px;
+    padding-bottom: 16px;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 .img_box img {
     width: 100%;
@@ -218,34 +226,44 @@ html video {
     transform: scale(1.03, 1.03);
     transition: transform 0.3s linear;
     
-    
 }
 .info_date {
+    margin: 0 auto;
     width: 65%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: space-around;
     text-align: left;   
 }
 .info_date h4 {
     font-size: 20px;
-    margin: 0;
+    margin: 0 auto;
+    padding-bottom: 12px;
 }
 .info_date p {
-    margin-top:10px;
     font-size: 18px;
+    margin: 0 auto;
+    padding-bottom: 24px;
 }
 .info_date a {
-   margin-top: 30px;
    text-decoration: none;
    color: #64A0E5;
 }
 #guest {
     background-color: #D8D8D8;
+    padding-top: 16px;
+}
+@media only screen and (min-width: 481px){
+    .img_boxmobile {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 480px){
+    .img_box {
+        display: none;
+    }
     .info_left {
         display: none;
     }
@@ -260,15 +278,20 @@ html video {
         flex-direction: column;
         width: 100%;
     }
-    .img_box {
+    
+    .img_boxmobile {
         width: 100%;
         padding: 0;
-        margin: 0 16px;
+        margin: 0 auto;
     }
-    .img_box img {
+    
+    .img_boxmobile img {
         width: 100%;
-        
     }
+    #guest {
+        background-color: white;
+    }
+    
   
 }
 
@@ -290,16 +313,16 @@ html video {
     width: 90%;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
 }
 .box {
     width: 30%;
     height: 40%;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     background-color: white;
     margin-bottom: 32px;
 }
@@ -322,6 +345,42 @@ html video {
 .courses {
     margin-left: 10px;
     font-size:20px;
+}
+@media only screen and (min-width: 481px) {
+    .main_mobile {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 480px){
+    .main_learn {
+        display: none; 
+    }
+    .main_mobile {
+        background-color: white;
+        border-top: 1px solid #D8D8D8;
+        margin: 0 auto;
+    }
+    .main_mobile h1 {
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .learn_list ul {
+        list-style-type: none;
+        margin: 0 auto;
+        padding: 16px;
+    }
+    .learn_list li {
+        display: block;
+        width: 100%;
+        background-color: #D8D8D8;
+        margin: 0 auto;
+    }
+    .learn_list h4 {
+        padding: 16px
+    }
 }
 
   /*Thesis section */
@@ -382,6 +441,27 @@ html video {
     clear: both;
 }
 
+@media only screen and (max-width: 480px) {
+    .thesis_main {
+        display: none;
+    }
+    .thesis_mobile {
+        width: 100%;
+        margin: 0 auto;
+        border-top: 1px solid #D8D8D8;
+ 
+    }
+    .thesis_mobile h1 {
+        text-align: center;
+    }
+    .thesis_mobile video {
+        width: 100%;
+    }
+    .urban {
+        display: none;
+    }
+}
+
   /*footer*/
 
 .footer {
@@ -400,6 +480,12 @@ html video {
 }
 .footer li {
     display: inline-block;
+    
+}
+@media only screen and (max-width: 480px){
+    .footer ul {
+        display: none;
+    }
     
 }
 
