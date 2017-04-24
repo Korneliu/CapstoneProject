@@ -11,7 +11,12 @@ html img {
 html video {
    box-shadow: 5px 5px 5px #888888; 
 }
-.navbar {
+@media only screen and (max-width: 480px) {
+    html img {
+        box-shadow: none;
+    }
+}
+.header {
     position: fixed;
     width: 100%;
     margin: 0 auto;
@@ -20,25 +25,25 @@ html video {
     padding: 10px 24px;
 
 }
-.navbar img {
+.header img {
     float: left;
     margin: 0 auto;
     height: 35px;
     
 }
-.navbar p {
+.header p {
     float: left;
     margin: 0 auto;
     padding-left: 20px;
     line-height: 40px;
     font-size: 20px;
 }
-.navbar ul {
+.header ul {
     margin: 0 auto;
     float: right;
     padding-right: 16px;
 }
-.navbar ul li {
+.header ul li {
     display: inline-block;
     width:150px;
     height: 40px;
@@ -47,7 +52,7 @@ html video {
     text-align: center;
     line-height: 40px;
 }
-.navbar a {
+.header a {
     display: block;
     padding: 0;
     text-decoration: none;
@@ -56,20 +61,20 @@ html video {
     width: 100%;
 }
 
-.navbar ul li:hover {
+.header ul li:hover {
     background-color: white;
     transition-property: color;
-    transition: 0.7s linear;
+    transition: 0.6s ease-out;
     color: red;
 }
-.navbar a:hover {
+.header a:hover {
     transition-property: color;
-    transition: 0.7s linear;
+    transition: 0.6s ease-out;
     color: red;
     
 }
 
-.navbar_mobile {
+.header_mobile {
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -78,18 +83,18 @@ html video {
     
 }
 @media only screen and (max-width: 480px) {
-    .navbar {
+    .header {
         display: none;
     }
 }
 
 @media only screen and (max-width: 480px){
-    .navbar_mobile {
+    .header_mobile {
         width: 100%;
     }
 }
 @media only screen and (min-width: 480px) {
-        .navbar_mobile {
+        .header_mobile {
             display: none;
         }
 }
@@ -111,7 +116,7 @@ html video {
 }
 .banner_left img {
     width: 100%;
-    
+    height: auto;
 }
 .banner_right {
     display: flex;
@@ -142,10 +147,9 @@ html video {
     color: red;
     background-color: #D8D8D8;
     transition-property: color;
-    transition: 0.7s linear;
+    transition: 0.6s ease-out;
 }
-
-
+               
 @media only screen and (max-width: 480px){
     .container {
         display: flex;
@@ -191,6 +195,7 @@ html video {
 }
 .info_left img {
     width: 100%;
+    height: auto;
 }
 .info_left h2 {
     margin: 0px;
@@ -221,6 +226,7 @@ html video {
 }
 .img_box img {
     width: 100%;
+    height: auto;
 }
 .img_box img:hover {
     transform: scale(1.03, 1.03);
@@ -278,15 +284,24 @@ html video {
         flex-direction: column;
         width: 100%;
     }
-    
+    .info_box h2 {
+         padding-left: 16px;
+    }
+    .info_box p {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+    .info_box a {
+         padding-left: 16px;
+    }
     .img_boxmobile {
         width: 100%;
         padding: 0;
         margin: 0 auto;
     }
-    
     .img_boxmobile img {
         width: 100%;
+        height: auto;
     }
     #guest {
         background-color: white;
@@ -325,10 +340,10 @@ html video {
     background-color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 .box img {
-    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 .box img:hover {
     transform: scale(1.03, 1.03);
@@ -336,11 +351,12 @@ html video {
 }
 .box h2 {
     font-weight: bold;
-    padding-left: 10px;
+    padding-left: 166px;
 }
 .box p {
     padding-left: 10px;
     font-size: 20px;
+    margin-bottom: 10px;
 }
 
 @media only screen and (min-width: 481px) {
@@ -348,7 +364,6 @@ html video {
         display: none;
     }
 }
-
 
 @media only screen and (max-width: 480px){
     .main_learn {
@@ -375,7 +390,8 @@ html video {
         background-color: #D8D8D8;
         margin: 0 auto;
     }
-    .learn_list h4 {
+    
+    .learn_list h3 {
         padding: 16px
     }
 }
@@ -413,9 +429,14 @@ html video {
 .thesis_img {
     width: 35%;
     padding: 16px;
+    height: auto;
     }
 .thesis_img img {
     width: 100%;
+}
+.thesis_img img:hover {
+    transform: scale(1.03, 1.03);
+    transition: transform 0.3s linear;
 }
 .thesis_boxes {
     display: flex;
@@ -433,6 +454,9 @@ html video {
     float: left;
     width: 58%;
     padding-left: 24px;
+    }
+.urban p{
+    font-size: 20px;
 }
 .clear {
     clear: both;
